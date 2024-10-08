@@ -1,0 +1,124 @@
+/* General page styles */
+.leafy-greens-page {
+    position: relative;
+    min-height: 100vh;
+    padding: 40px 20px;
+    animation: fadeIn 1s ease-in-out;
+    overflow: hidden; /* Ensure content doesn't spill over the blurred background */
+}
+
+/* Background image with blur effect */
+.leafy-greens-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./assets/leafy-background.jpg'); /* Path to the background image */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    background-repeat: no-repeat; /* Prevents the background from repeating */
+    filter: blur(2px); /* Applies blur effect only to the background image */
+    z-index: -1; /* Keeps the background behind the content */
+}
+
+/* Container for leafy greens content */
+.leafy-greens-container {
+    background-color: #ffffff;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1; /* Ensures content remains above the background */
+}
+
+/* Main title styles */
+.leafy-greens-container h2 {
+    color: #4CAF50;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 2.5rem;
+}
+
+/* Each leafy green section styles */
+.leafy-green-section {
+    margin-bottom: 50px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: box-shadow 0.3s ease;
+}
+
+.leafy-green-section:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styles */
+.leafy-green-image {
+    width: 450px;
+    height: auto;
+    margin: 0 auto 15px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leafy-green-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Details section styles */
+.leafy-greens-details {
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    padding: 5px 0;
+}
+
+/* Back button styles */
+.back-button {
+    margin-top: 50px;
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 140px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

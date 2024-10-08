@@ -1,0 +1,125 @@
+/* General page styles */
+.lean-proteins-page {
+    position: relative;
+    min-height: 100vh;
+    padding: 40px 20px;
+    animation: fadeIn 1s ease-in-out;
+    overflow: hidden; /* Ensure content doesn't spill over the blurred background */
+}
+
+/* Background image with blur effect */
+.lean-proteins-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./assets/leafy-background.jpg'); /* Path to the background image */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    background-repeat: no-repeat; /* Prevents the background from repeating */
+    filter: blur(2px); /* Applies blur effect only to the background image */
+    z-index: -1; /* Keeps the background behind the content */
+}
+
+/* Container for lean proteins content */
+.lean-proteins-container {
+    background-color: #ffffff; /* White background for content */
+    padding: 40px;
+    max-width: 1200px; /* Consistent width with leafy greens */
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    position: relative; /* To stack above the blurred background */
+    z-index: 1; /* Ensures content remains above the background */
+}
+
+/* Main title styles */
+.lean-proteins-container h2 {
+    color: #4CAF50; /* Green color for the title */
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Arial', sans-serif; /* Font style */
+    font-size: 2.5rem; /* Increased font size for better visibility */
+}
+
+/* Each lean protein section styles */
+.lean-protein-section {
+    margin-bottom: 50px; /* Space between sections */
+    text-align: center;
+    padding: 20px; /* Padding inside sections */
+    border: 1px solid #e0e0e0; /* Border for separation */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background for sections */
+    transition: box-shadow 0.3s ease; /* Shadow transition on hover */
+}
+
+.lean-protein-section:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Image styles */
+.lean-protein-image {
+    width: 400px; /* Adjusted width to match leafy greens */
+    height: auto;
+    margin: 0 auto 15px; /* Centering image */
+    border-radius: 15px; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Combined hover effects */
+}
+
+.lean-protein-image:hover {
+    transform: scale(1.05); /* Slight scale on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Details section styles */
+.lean-proteins-details {
+    text-align: left; /* Left-align text */
+    font-family: 'Arial', sans-serif; /* Font style */
+    line-height: 1.6; /* Better line spacing */
+}
+
+/* List styles */
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding-left: 0; /* Remove padding for alignment */
+}
+
+li {
+    padding: 5px 0; /* Padding for list items */
+}
+
+/* Back button styles */
+.back-button {
+    margin-top: 50px; /* Margin on top */
+    padding: 15px 30px; /* Button padding */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: block; /* Block display for centering */
+    width: 160px; /* Button width */
+    text-align: center; /* Center text */
+    margin-left: auto; /* Centering the button */
+    margin-right: auto; /* Centering the button */
+    font-size: 1.2rem; /* Font size */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Combined transitions */
+}
+
+.back-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight upward movement on hover */
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+        opacity: 1; /* Fade to full opacity */
+    }
+}
